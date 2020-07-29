@@ -10,16 +10,31 @@ Gauge with customized dotnet plugin, which can be used to run gauge tests for do
 ## Command Line
 * Go to the root folder of the automation test project.
 * Open Powershell under the folder, run 
+
+### Linux
 ```
-docker run --rm -v ${PWD}:"C:\workspace" -w "C:\workspace\" jenniferz79/gaugedotnetwin gauge.cmd run specs\WebServiceTest.spec
+docker run --rm -v $(PWD):/workspace -w /workspace jenniferz79/gaugedotnetlinux gauge run ./DS_AUT.Test/specs/WebServiceTest.spec
 ```
+
+### Windows
+```
+docker run --rm -v ${PWD}:/workspace -w /workspace jenniferz79/gaugedotnetlinux gauge run ./DS_AUT.Test/specs/WebServiceTest.spec
+```
+
 ## Interactive mode
 * Go to the root folder of the automation test project.
 * Open Powershell under the folder, run 
+### Linux
 ```
-docker run -it -v ${PWD}:"C:\workspace" -w "C:\workspace\" jenniferz79/gaugedotnetwin
+docker run --rm -it -v $(PWD):/workspace -w /workspace jenniferz79/gaugedotnetlinux
 ```
+
+### Windows
+```
+docker run --rm -it -v ${PWD}:/workspace -w /workspace jenniferz79/gaugedotnetlinux
+```
+
 * A container will be created in interactive mode. You can run gauge command to run test in the PowerShell terminal. e.g.
 ```
-gauge run specs\WebService.spec
+gauge run specs/WebService.spec
 ```

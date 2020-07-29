@@ -24,6 +24,7 @@ docker run --rm -v ${PWD}:/workspace -w /workspace jenniferz79/gaugedotnetlinux 
 ## Interactive mode
 * Go to the root folder of the automation test project.
 * Open Powershell under the folder, run 
+
 ### Linux
 ```
 docker run --rm -it -v $(PWD):/workspace -w /workspace jenniferz79/gaugedotnetlinux

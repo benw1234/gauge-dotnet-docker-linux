@@ -15,7 +15,7 @@ RUN gauge install dotnet -f ./gauge-dotnet-2.1.4.zip
 # Install gauge plugins
 RUN gauge install html-report && \
     gauge install screenshot && \
-    gauge config runner_connection_timeout %GAUGE_TIMEOUT%
+    gauge config runner_connection_timeout ${GAUGE_TIMEOUT}
 
 # Set environment variables for Gauge, and Credential Provider of Nuget
 ENV PATH=$HOME/.gauge:$PATH

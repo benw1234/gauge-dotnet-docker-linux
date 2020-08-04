@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.1
+FROM mcr.microsoft.com/dotnet/core/sdk:2.1-alpine
 # Set Gauge API timeout to 60s for big project need more time to do dotnet restore.
 ARG GAUGE_TIMEOUT=60000
 
